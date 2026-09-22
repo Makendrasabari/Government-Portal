@@ -138,10 +138,10 @@ function initUserProfile() {
       } else {
         // Default sample if no session stored
         currentRole = 'Citizen';
-        user.name = 'Ananya Sharma';
-        user.email = 'ananya.sharma@gov.citizen.in';
+        user.name = 'Balakrishnan';
+        user.email = 'balakrishnan@gmail.com';
         user.role = 'Citizen';
-        user.initials = 'AS';
+        user.initials = 'BK';
       }
     } catch (err) {
       console.warn('Session reading fallback', err);
@@ -169,6 +169,12 @@ function initUserProfile() {
 
   const dropRoleEl = document.getElementById('dropdown-user-role');
   if (dropRoleEl) dropRoleEl.textContent = user.role;
+
+  // Update Welcome Note on both main dashboard pages
+  const welcomeNameEls = document.querySelectorAll('.user-welcome-name');
+  welcomeNameEls.forEach(el => {
+    el.textContent = user.name;
+  });
 
   // Profile Widget Click Toggle
   const profileWidget = document.getElementById('dash-user-profile-menu');
@@ -301,20 +307,19 @@ function setDashboardRole(role, targetTab = null) {
     const stored = localStorage.getItem('gov_portal_session');
     let session = stored ? JSON.parse(stored) : {};
     session.role = role;
-    if (role === 'Citizen' && (!session.name || session.name.includes('IAS') || session.name.includes('Admin'))) {
-      session.name = 'Ananya Sharma';
-      session.email = 'ananya.sharma@gov.citizen.in';
-      session.initials = 'AS';
-    } else if (role === 'Government Official' && (!session.name || session.name.includes('Ananya') || session.name.includes('Citizen'))) {
-      session.name = 'Shri Rajesh Kumar, IAS';
-      session.email = 'rajesh.kumar@nic.in';
-      session.initials = 'RK';
+    
+    // Preserve custom logged-in user name across both roles
+    if (!session.name) {
+      session.name = 'Balakrishnan';
+      session.email = role === 'Citizen' ? 'balakrishnan@gmail.com' : 'balakrishnan@nic.in';
+      session.initials = 'BK';
     }
     localStorage.setItem('gov_portal_session', JSON.stringify(session));
 
     // Update displayed names to match
+    const activeName = session.name;
     const userNameEl = document.getElementById('user-display-name');
-    if (userNameEl && session.name) userNameEl.textContent = session.name;
+    if (userNameEl && activeName) userNameEl.textContent = activeName;
 
     const userEmailEl = document.getElementById('user-display-email');
     if (userEmailEl && session.email) userEmailEl.textContent = session.email;
@@ -323,10 +328,16 @@ function setDashboardRole(role, targetTab = null) {
     if (avatarInitialsEl && session.initials) avatarInitialsEl.textContent = session.initials;
 
     const dropNameEl = document.getElementById('dropdown-user-name');
-    if (dropNameEl && session.name) dropNameEl.textContent = session.name;
+    if (dropNameEl && activeName) dropNameEl.textContent = activeName;
 
     const dropEmailEl = document.getElementById('dropdown-user-email');
     if (dropEmailEl && session.email) dropEmailEl.textContent = session.email;
+
+    // Update Welcome Note on both main dashboard pages
+    const welcomeNameEls = document.querySelectorAll('.user-welcome-name');
+    welcomeNameEls.forEach(el => {
+      el.textContent = activeName;
+    });
   } catch (err) {}
 
   // 7. Activate Selected Tab

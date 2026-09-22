@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTabs();
   initFAQ();
   initHeroCarousel();
+  initHeroCategoriesArrangeAnimation();
   initNewsShuffle();
   initValuesShuffleAndFlip();
   initMilestonesTimelineAnimation();
@@ -419,6 +420,48 @@ function initHeroCarousel() {
   setInterval(() => {
     setSlide(currentIndex + 1);
   }, 2000);
+}
+
+/* Hero Categories Bar: Sequential Arrange Animation Controller (Education -> Health -> Agriculture -> Business -> Transport -> Social Welfare) */
+function initHeroCategoriesArrangeAnimation() {
+  const bar = document.getElementById('hero-categories-bar');
+  if (!bar) return;
+
+  let arrangeDone = false;
+
+  function triggerArrange() {
+    if (arrangeDone) return;
+    arrangeDone = true;
+
+    bar.classList.remove('is-animated', 'arrange-complete');
+    void bar.offsetWidth; // Force reflow
+    bar.classList.add('is-animated');
+
+    // Release animation locks after the 6th card finishes settling (~1.85s) so hover works smoothly
+    setTimeout(() => {
+      bar.classList.add('arrange-complete');
+    }, 1850);
+  }
+
+  // Preloader opens at ~1.5s; trigger when ready or via intersection
+  const preloader = document.getElementById('gov-preloader');
+  if (preloader && !preloader.classList.contains('done')) {
+    setTimeout(triggerArrange, 1550);
+  } else {
+    triggerArrange();
+  }
+
+  // Intersection observer fallback
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        triggerArrange();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  observer.observe(bar);
 }
 
 /* Shuffle and Arrange Animation for Latest News & Updates */

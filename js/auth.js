@@ -214,21 +214,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       let hasError = false;
 
-      // Validate Email in @gmail.com format
+      // Validate Email or Username (at least 3 characters for username, or valid @gmail.com)
+      const isEmail = rawInput.includes('@');
       const gmailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/i;
-      if (!rawInput || !gmailRegex.test(rawInput)) {
-        showFieldError(emailInput, emailErrorEl, 'Enter email in @gmail.com format');
+      if (!rawInput || (isEmail && !gmailRegex.test(rawInput)) || (!isEmail && rawInput.length < 3)) {
+        showFieldError(emailInput, emailErrorEl, isEmail ? 'Enter email in @gmail.com format' : 'Enter valid username (at least 3 characters)');
         hasError = true;
       }
 
-      // Validate Password (at least 4 characters)
-      if (!password || password.length < 4) {
-        showFieldError(passInput, passErrorEl, 'Enter at least 4 characters');
+      // Validate Password (at least 8 characters)
+      if (!password || password.length < 8) {
+        showFieldError(passInput, passErrorEl, 'Enter at least 8 characters');
         hasError = true;
       }
 
       if (hasError) {
-        if (!rawInput || !gmailRegex.test(rawInput)) {
+        if (!rawInput || (isEmail && !gmailRegex.test(rawInput)) || (!isEmail && rawInput.length < 3)) {
           emailInput?.focus();
         } else {
           passInput?.focus();
@@ -238,7 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Generate displayName and initials
       const displayName = parseDisplayName(rawInput);
-      const email = rawInput;
+      const email = isEmail ? rawInput : `${rawInput.toLowerCase().replace(/\s+/g, '')}@gmail.com`;
       const initials = generateInitials(displayName);
 
       const sessionData = {
@@ -368,14 +369,17 @@ document.addEventListener('DOMContentLoaded', () => {
         hasError = true;
       }
 
-      // 3. Validate Create Password
-      if (!pass || pass.length < 4) {
-        showSignupError(passInput, signupPassError, 'Enter at least 4 characters');
+      // 3. Validate Create Password (at least 8 characters)
+      if (!pass || pass.length < 8) {
+        showSignupError(passInput, signupPassError, 'Enter at least 8 characters');
         hasError = true;
       }
 
-      // 4. Validate Confirm Password
-      if (pass !== confirmPass) {
+      // 4. Validate Confirm Password (at least 8 characters & match)
+      if (!confirmPass || confirmPass.length < 8) {
+        showSignupError(confirmPassInput, signupConfirmError, 'Enter at least 8 characters');
+        hasError = true;
+      } else if (pass !== confirmPass) {
         showSignupError(confirmPassInput, signupConfirmError, 'Passwords do not match');
         hasError = true;
       }

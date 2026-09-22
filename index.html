@@ -133,48 +133,78 @@
           </div>
         </div>
 
-        <!-- Hero Quick Categories Strip (Constantly Visible, Display Only) -->
-        <div class="hero-categories-bar">
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        <!-- Hero Quick Categories Strip (Sequential Arrange Animation & Hover Background Images) -->
+        <div class="hero-categories-bar" id="hero-categories-bar">
+          <!-- 1. Education -->
+          <div class="hero-cat-card hero-cat-1" data-cat="education">
+            <div class="hero-cat-bg" style="background-image: url('Assets/cat-education.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+              </div>
+              <span class="hero-cat-label">Education</span>
             </div>
-            <span class="hero-cat-label">Education</span>
           </div>
 
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <!-- 2. Health -->
+          <div class="hero-cat-card hero-cat-2" data-cat="health">
+            <div class="hero-cat-bg" style="background-image: url('Assets/news-health.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+              </div>
+              <span class="hero-cat-label">Health</span>
             </div>
-            <span class="hero-cat-label">Health</span>
           </div>
 
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a9 9 0 019 9c0 4.97-4.03 9-9 9s-9-4.03-9-9a9 9 0 019-9z"/><path d="M12 6v10M9 10l3-3 3 3"/></svg>
+          <!-- 3. Agriculture -->
+          <div class="hero-cat-card hero-cat-3" data-cat="agriculture">
+            <div class="hero-cat-bg" style="background-image: url('Assets/news-agriculture.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22v-9"/><path d="M12 13a5 5 0 0 0 5-5V4a5 5 0 0 0-5 5"/><path d="M12 13a5 5 0 0 1-5-5V4a5 5 0 0 1 5 5"/></svg>
+              </div>
+              <span class="hero-cat-label">Agriculture</span>
             </div>
-            <span class="hero-cat-label">Agriculture</span>
           </div>
 
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+          <!-- 4. Business -->
+          <div class="hero-cat-card hero-cat-4" data-cat="business">
+            <div class="hero-cat-bg" style="background-image: url('Assets/card-bg-trade.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+              </div>
+              <span class="hero-cat-label">Business</span>
             </div>
-            <span class="hero-cat-label">Business</span>
           </div>
 
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 13h18M7 21l2-4M17 21l-2-4"/></svg>
+          <!-- 5. Transport -->
+          <div class="hero-cat-card hero-cat-5" data-cat="transport">
+            <div class="hero-cat-bg" style="background-image: url('Assets/news-transport.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="14" rx="2"/><path d="M3 13h18M7 21l2-4M17 21l-2-4"/></svg>
+              </div>
+              <span class="hero-cat-label">Transport</span>
             </div>
-            <span class="hero-cat-label">Transport</span>
           </div>
 
-          <div class="hero-cat-card">
-            <div class="hero-cat-icon">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          <!-- 6. Social Welfare -->
+          <div class="hero-cat-card hero-cat-6" data-cat="social-welfare">
+            <div class="hero-cat-bg" style="background-image: url('Assets/card-bg-community.webp');"></div>
+            <div class="hero-cat-bg-overlay"></div>
+            <div class="hero-cat-content">
+              <div class="hero-cat-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+              </div>
+              <span class="hero-cat-label">Social Welfare</span>
             </div>
-            <span class="hero-cat-label">Social Welfare</span>
           </div>
         </div>
       </div>

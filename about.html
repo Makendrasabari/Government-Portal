@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Government Portal</title>
+  <meta name="description" content="Learn about our mission, vision, governance values, leadership, and our citizen-first commitment toward transparent digital public infrastructure.">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body class="has-fixed-header">
+
+  <!-- Government Portal Premium Split Preloader -->
+  <div class="gov-preloader" id="gov-preloader" aria-hidden="true">
+    <!-- Two Equal Halves (Split Screen Shutter) -->
+    <div class="preloader-half preloader-half-left"></div>
+    <div class="preloader-half preloader-half-right"></div>
+
+    <!-- Centered Stackly Logo & Slogan Content -->
+    <div class="preloader-center">
+      <div class="preloader-logo-box">
+        <img src="Assets/stackly_logo_clean.webp" alt="Stackly Government Portal" class="preloader-logo">
+      </div>
+      <p class="preloader-slogan">Citizen First For a Stronger Nation</p>
+      <div class="preloader-progress-track">
+        <div class="preloader-progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Header -->
+  <header class="gov-header">
+    <div class="container gov-nav-wrapper">
+      <a href="index.html" class="gov-brand" aria-label="Government Portal Home">
+        <div class="gov-logo-container">
+          <img src="Assets/stackly_logo_clean.webp" alt="Stackly Government Portal" class="gov-logo-img">
+        </div>
+      </a>
+
+      <nav class="gov-nav-menu">
+        <a href="index.html" class="gov-nav-link">Home</a>
+        <a href="about.html" class="gov-nav-link active">About</a>
+        <a href="services.html" class="gov-nav-link">Services</a>
+        <a href="blog.html" class="gov-nav-link">Blog</a>
+        <a href="contact.html" class="gov-nav-link">Contact</a>
+      </nav>
+
+      <div class="gov-nav-actions">
+        <a href="login.html" class="btn-gov-primary btn-gov-sm">
+          <span>Login</span>
+        </a>
+        <button type="button" class="gov-mobile-toggle" aria-label="Toggle Navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="gov-mobile-drawer" id="mobile-drawer">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="about.html" class="mobile-nav-link active">About</a>
+    <a href="services.html" class="mobile-nav-link">Services</a>
+    <a href="blog.html" class="mobile-nav-link">Blog</a>
+    <a href="contact.html" class="mobile-nav-link">Contact</a>
+    <div class="mobile-drawer-footer">
+      <a href="login.html" class="btn-gov-primary btn-mobile-login">Login</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Hero Banner with Background Image -->
+    <section class="page-hero page-hero-about">
+      <div class="container">
+        <div class="page-breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>About Us</span>
+        </div>
+        <h1 class="page-hero-title">
+          <span class="anim-hero-left">About the</span>
+          <span class="anim-hero-right highlight-green">Government Portal</span>
+        </h1>
+        <p class="page-hero-desc anim-hero-up">
+          Pioneering citizen-first digital governance, uncompromised transparency, and inclusive public service delivery across every district and panchayat.
+        </p>
+      </div>
+    </section>
+
+    <!-- Overview Section (Image + Content Split) -->
+    <section class="section-padding" style="background: #FFFFFF; overflow: hidden;">
+      <div class="container">
+        <div class="about-split-grid">
+          <div class="about-content-left anim-about-left">
+            <span class="section-tag">Digital Democracy in Action</span>
+            <h2 class="section-title">Building a Transparent and Inclusive India</h2>
+            <p style="color: var(--text-soft); font-size: 1.05rem; line-height: 1.7; margin-bottom: 20px;">
+              The Government Portal represents the unified digital gateway for all citizen-centric public utilities, welfare disbursements, and administrative services. Launched under the Digital Public Infrastructure mandate, our objective is to eliminate traditional bureaucratic bottlenecks and provide every resident equitable, dignified access to their rights and entitlements.
+            </p>
+            <p style="color: var(--text-soft); font-size: 1rem; line-height: 1.7; margin-bottom: 28px;">
+              By uniting over 25 municipal, revenue, healthcare, and educational departments into a singular microservice architecture, we guarantee tamper-proof records, instant certificate validation, and real-time grievance tracking with direct collectorate accountability.
+            </p>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <a href="404.html" class="btn-gov-primary">View Citizen Services</a>
+              <a href="404.html" class="btn-gov-secondary">Contact Administration</a>
+            </div>
+          </div>
+
+          <div class="about-image-wrap anim-about-image" id="about-building-wrap">
+            <div class="split-shutter shutter-left"></div>
+            <div class="split-shutter shutter-right"></div>
+            <div class="split-center-line"></div>
+            <img src="Assets/about-building.webp" alt="National Secretariat and Supreme Administrative Court Building with fountains and citizens">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Cards -->
+    <section class="section-padding" style="background: var(--bg-surface); overflow: hidden;">
+      <div class="container">
+        <div style="max-width: 820px; margin: 0 auto 48px;">
+          <span class="section-tag fade-in-up">Our Guiding Light</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Mission & Vision</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">Anchoring governance in democratic principles, technological excellence, and public service integrity.</p>
+        </div>
+
+        <div class="values-grid values-shuffle-grid" id="values-shuffle-grid">
+          <!-- Card 1: Our Mission (Shuffles from 3rd to 1st, Flips on Hover) -->
+          <div class="flip-card values-card values-card-1" tabindex="0" role="region" aria-label="Our Mission card. Hover to view photo.">
+            <div class="flip-card-inner">
+              <!-- Front Face -->
+              <div class="flip-card-front">
+                <div class="gov-card-icon">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3 class="values-card-title">Our Mission</h3>
+                <p class="values-card-desc">
+                  To make every state and central public service 100% accessible digitally, completely paperless, and delivered within legally mandated service level agreements (SLAs) without citizen friction.
+                </p>
+              </div>
+
+              <!-- Back Face (Image Display) -->
+              <div class="flip-card-back">
+                <img src="Assets/citizen-service.webp" alt="Citizen Service Delivery Center" class="flip-back-img">
+                <div class="flip-back-overlay">
+                  <span class="flip-back-badge">Our Mission</span>
+                  <h4>100% Digital Public Delivery</h4>
+                  <p>Unified citizen service centers ensuring zero queues and end-to-end paperless access.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Our Vision (Presents in Center, Flips on Hover) -->
+          <div class="flip-card values-card values-card-2" tabindex="0" role="region" aria-label="Our Vision card. Hover to view photo.">
+            <div class="flip-card-inner">
+              <!-- Front Face -->
+              <div class="flip-card-front">
+                <div class="gov-card-icon">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
+                </div>
+                <h3 class="values-card-title">Our Vision</h3>
+                <p class="values-card-desc">
+                  An inclusive, digitally sovereign society where every citizen—from metropolitan hubs to remote rural villages—experiences equal, corruption-free governance and seamless welfare rights.
+                </p>
+              </div>
+
+              <!-- Back Face (Image Display) -->
+              <div class="flip-card-back">
+                <img src="Assets/hero-command.webp" alt="Digital Infrastructure Command Hub" class="flip-back-img">
+                <div class="flip-back-overlay">
+                  <span class="flip-back-badge">Our Vision</span>
+                  <h4>Digital Sovereign Society</h4>
+                  <p>Next-generation smart governance bridging remote villages with real-time administration.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Data Trust & Security (Shuffles from 1st to 3rd, Flips on Hover) -->
+          <div class="flip-card values-card values-card-3" tabindex="0" role="region" aria-label="Data Trust & Security card. Hover to view photo.">
+            <div class="flip-card-inner">
+              <!-- Front Face -->
+              <div class="flip-card-front">
+                <div class="gov-card-icon">
+                  <svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                </div>
+                <h3 class="values-card-title">Data Trust & Security</h3>
+                <p class="values-card-desc">
+                  State-of-the-art encryption, zero-knowledge architectural privacy, strict adherence to Digital Personal Data Protection laws, and multi-tier sovereign data centers.
+                </p>
+              </div>
+
+              <!-- Back Face (Image Display) -->
+              <div class="flip-card-back">
+                <img src="Assets/benefit-bg-paperless.webp" alt="Cryptographic Data Encryption Security" class="flip-back-img">
+                <div class="flip-back-overlay">
+                  <span class="flip-back-badge">Security Shield</span>
+                  <h4>Encrypted Sovereign Trust</h4>
+                  <p>Zero-knowledge cryptographic security, DPDP compliance, and state data sovereignty.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Governance Milestones Timeline -->
+    <section class="section-padding" style="background: #FFFFFF; overflow: hidden;" id="section-milestones">
+      <div class="container">
+        <div style="max-width: 820px; margin: 0 auto 48px;">
+          <span class="section-tag fade-in-up">Transformation Journey</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Milestones in Digital Governance</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">Tracing the evolutionary steps from traditional paper registries to India's unified citizen portal.</p>
+        </div>
+
+        <div class="timeline-container" id="timeline-milestones-container" style="max-width: 820px; margin: 0 auto;">
+          <div class="timeline-track-line"></div>
+          <div class="timeline-progress-line" id="timeline-progress-line"></div>
+
+          <!-- Milestone 1: 2015 -->
+          <div class="timeline-item timeline-item-1" data-step="1">
+            <div class="timeline-circle" title="2015 - Digital India Flagship" tabindex="0" role="button" aria-label="Milestone 2015 Digital India Flagship">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-year">
+                <span class="milestone-badge">2015</span>
+                <span class="milestone-title-text">&bull; Digital India Flagship</span>
+              </div>
+              <p class="timeline-sentence">
+                Initiation of nationwide optical fiber broadband connectivity across gram panchayats and integration of basic digital citizen lockers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 2: 2018 -->
+          <div class="timeline-item timeline-item-2" data-step="2">
+            <div class="timeline-circle" title="2018 - Direct Benefit Transfer Revolution" tabindex="0" role="button" aria-label="Milestone 2018 Direct Benefit Transfer Revolution">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-year">
+                <span class="milestone-badge">2018</span>
+                <span class="milestone-title-text">&bull; Direct Benefit Transfer Revolution</span>
+              </div>
+              <p class="timeline-sentence">
+                Connecting JAM Trinity (Jan Dhan, Aadhaar, Mobile) to eliminate leakage and disburse scholarships and subsidies directly to beneficiaries.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 3: 2022 -->
+          <div class="timeline-item timeline-item-3" data-step="3">
+            <div class="timeline-circle" title="2022 - Unified Single Window Portal" tabindex="0" role="button" aria-label="Milestone 2022 Unified Single Window Portal">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-year">
+                <span class="milestone-badge">2022</span>
+                <span class="milestone-title-text">&bull; Unified Single Window Portal</span>
+              </div>
+              <p class="timeline-sentence">
+                Convergence of district administration, commercial taxes, revenue registries, and municipal services into an integrated online interface.
+              </p>
+            </div>
+          </div>
+
+          <!-- Milestone 4: 2026 -->
+          <div class="timeline-item timeline-item-4" data-step="4">
+            <div class="timeline-circle" title="2026 - Next-Gen Citizen First Platform" tabindex="0" role="button" aria-label="Milestone 2026 Next-Gen Citizen First Platform">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            </div>
+            <div class="timeline-content-card">
+              <div class="timeline-year">
+                <span class="milestone-badge">2026</span>
+                <span class="milestone-title-text">&bull; Next-Gen Citizen First Platform</span>
+              </div>
+              <p class="timeline-sentence">
+                Autonomous document validation, AI-guided application filing, real-time grievance escalation to District Collectors, and bilingual accessibility.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Council: Continuous Horizontal Live Run -->
+    <section class="section-padding" style="background: var(--bg-surface); overflow: hidden;" id="section-leadership">
+      <div class="container">
+        <div style="display: flex; align-items: flex-end; justify-content: space-between; max-width: 1100px; margin: 0 auto 36px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <span class="section-tag fade-in-up">Administrative Stewardship</span>
+            <h2 class="section-title" style="margin-bottom: 8px;">Leadership & Governance</h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">Steered by distinguished public servants dedicated to ethical administration and digital innovation.</p>
+          </div>
+          <div style="display: flex; align-items: center; gap: 12px; height: fit-content;">
+            <span class="leadership-live-badge" title="Live Continuous Stream Active">
+              <span class="leadership-live-dot"></span>
+              <span>Live Run</span>
+            </span>
+            <button type="button" class="btn-gov-secondary btn-gov-sm" id="btn-toggle-leadership-scroll" title="Pause or Resume Live Stream" style="display: inline-flex; align-items: center; gap: 6px; cursor: pointer;">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" id="icon-leadership-pause"><path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/></svg>
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24" id="icon-leadership-play" style="display: none;"><path d="M8 5v14l11-7z"/></svg>
+              <span id="text-leadership-toggle">Pause</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Marquee Full-Width Strip with Horizontal Continuous Live Run -->
+      <div class="leadership-marquee-container" id="leadership-marquee-container">
+        <div class="leadership-marquee-track" id="leadership-marquee-track">
+          <!-- Leader 1: Dr. K. Rajasekhar, IAS -->
+          <div class="leader-card">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-rajasekhar.webp" alt="Dr. K. Rajasekhar, IAS" class="leader-avatar-img">
+              <span class="leader-status-indicator" title="Active in Service"></span>
+            </div>
+            <h4 class="leader-name">Dr. K. Rajasekhar, IAS</h4>
+            <p class="leader-role">Chief Secretary to Government</p>
+            <span class="leader-batch-tag">IAS &bull; Apex Civil Service</span>
+            <p class="leader-desc">
+              Over 28 years of civil administrative experience leading statewide administrative reforms and digital inclusion programs.
+            </p>
+          </div>
+
+          <!-- Leader 2: Padmini Sundaram, IAS -->
+          <div class="leader-card">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-padmini.webp" alt="Padmini Sundaram, IAS" class="leader-avatar-img">
+              <span class="leader-status-indicator" title="Active in Service"></span>
+            </div>
+            <h4 class="leader-name">Padmini Sundaram, IAS</h4>
+            <p class="leader-role">Commissioner of e-Governance</p>
+            <span class="leader-batch-tag">IAS &bull; e-Gov Directorate</span>
+            <p class="leader-desc">
+              Pioneered the Salem District Smart Collectorate model and automated grievance resolution frameworks.
+            </p>
+          </div>
+
+          <!-- Leader 3: R. Karthikeyan -->
+          <div class="leader-card">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-karthikeyan.webp" alt="R. Karthikeyan" class="leader-avatar-img">
+              <span class="leader-status-indicator" title="Active in Service"></span>
+            </div>
+            <h4 class="leader-name">R. Karthikeyan</h4>
+            <p class="leader-role">State Technology Director</p>
+            <span class="leader-batch-tag">Digital Infrastructure Division</span>
+            <p class="leader-desc">
+              Architect behind the high-availability cloud infrastructure handling over 5 million daily citizen transactions.
+            </p>
+          </div>
+
+          <!-- Leader 4: Dr. S. Meenakshi, IAS -->
+          <div class="leader-card">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-meenakshi.webp" alt="Dr. S. Meenakshi, IAS" class="leader-avatar-img">
+              <span class="leader-status-indicator" title="Active in Service"></span>
+            </div>
+            <h4 class="leader-name">Dr. S. Meenakshi, IAS</h4>
+            <p class="leader-role">Addl. Chief Secretary (Finance & IT)</p>
+            <span class="leader-batch-tag">IAS &bull; Fiscal Systems</span>
+            <p class="leader-desc">
+              Championing direct fiscal allocations, transparent procurement portals, and statewide fintech inclusion initiatives.
+            </p>
+          </div>
+
+          <!-- Leader 5: V. Sundaram, IPS -->
+          <div class="leader-card">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-sundaram.webp" alt="V. Sundaram, IPS" class="leader-avatar-img">
+              <span class="leader-status-indicator" title="Active in Service"></span>
+            </div>
+            <h4 class="leader-name">V. Sundaram, IPS</h4>
+            <p class="leader-role">Director General (Cyber & Security)</p>
+            <span class="leader-batch-tag">IPS &bull; Cyber Command</span>
+            <p class="leader-desc">
+              Directing state-level cyber crisis response, zero-trust infrastructure, and critical citizen identity safeguarding.
+            </p>
+          </div>
+
+          <!-- SEAMLESS CONTINUOUS LOOP DUPLICATE SET -->
+          <!-- Duplicate 1 -->
+          <div class="leader-card" aria-hidden="true">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-rajasekhar.webp" alt="" class="leader-avatar-img">
+              <span class="leader-status-indicator"></span>
+            </div>
+            <h4 class="leader-name">Dr. K. Rajasekhar, IAS</h4>
+            <p class="leader-role">Chief Secretary to Government</p>
+            <span class="leader-batch-tag">IAS &bull; Apex Civil Service</span>
+            <p class="leader-desc">
+              Over 28 years of civil administrative experience leading statewide administrative reforms and digital inclusion programs.
+            </p>
+          </div>
+
+          <!-- Duplicate 2 -->
+          <div class="leader-card" aria-hidden="true">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-padmini.webp" alt="" class="leader-avatar-img">
+              <span class="leader-status-indicator"></span>
+            </div>
+            <h4 class="leader-name">Padmini Sundaram, IAS</h4>
+            <p class="leader-role">Commissioner of e-Governance</p>
+            <span class="leader-batch-tag">IAS &bull; e-Gov Directorate</span>
+            <p class="leader-desc">
+              Pioneered the Salem District Smart Collectorate model and automated grievance resolution frameworks.
+            </p>
+          </div>
+
+          <!-- Duplicate 3 -->
+          <div class="leader-card" aria-hidden="true">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-karthikeyan.webp" alt="" class="leader-avatar-img">
+              <span class="leader-status-indicator"></span>
+            </div>
+            <h4 class="leader-name">R. Karthikeyan</h4>
+            <p class="leader-role">State Technology Director</p>
+            <span class="leader-batch-tag">Digital Infrastructure Division</span>
+            <p class="leader-desc">
+              Architect behind the high-availability cloud infrastructure handling over 5 million daily citizen transactions.
+            </p>
+          </div>
+
+          <!-- Duplicate 4 -->
+          <div class="leader-card" aria-hidden="true">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-meenakshi.webp" alt="" class="leader-avatar-img">
+              <span class="leader-status-indicator"></span>
+            </div>
+            <h4 class="leader-name">Dr. S. Meenakshi, IAS</h4>
+            <p class="leader-role">Addl. Chief Secretary (Finance & IT)</p>
+            <span class="leader-batch-tag">IAS &bull; Fiscal Systems</span>
+            <p class="leader-desc">
+              Championing direct fiscal allocations, transparent procurement portals, and statewide fintech inclusion initiatives.
+            </p>
+          </div>
+
+          <!-- Duplicate 5 -->
+          <div class="leader-card" aria-hidden="true">
+            <div class="leader-avatar-wrap">
+              <img src="Assets/leader-sundaram.webp" alt="" class="leader-avatar-img">
+              <span class="leader-status-indicator"></span>
+            </div>
+            <h4 class="leader-name">V. Sundaram, IPS</h4>
+            <p class="leader-role">Director General (Cyber & Security)</p>
+            <span class="leader-batch-tag">IPS &bull; Cyber Command</span>
+            <p class="leader-desc">
+              Directing state-level cyber crisis response, zero-trust infrastructure, and critical citizen identity safeguarding.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 1: Departmental Hierarchy & Administrative Matrix -->
+    <section class="section-padding" style="background: #FFFFFF; overflow: hidden;" id="section-hierarchy">
+      <div class="container">
+        <div style="max-width: 1100px; margin: 0 auto 48px;">
+          <span class="section-tag fade-in-up">Governance Architecture</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Departmental Hierarchy & Matrix</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">
+            A multi-tiered administrative structure engineered to eliminate silos, ensure auditability, and speed up direct citizen delivery.
+          </p>
+        </div>
+
+        <div class="org-hierarchy-grid" id="org-hierarchy-grid">
+          <!-- Tier 1: Apex Policy -->
+          <div class="org-tier-card org-tier-1" data-tier="1" tabindex="0">
+            <div class="org-tier-bg" style="background-image: url('Assets/hero-parliament.webp');"></div>
+            <div class="org-tier-bg-overlay"></div>
+            <div class="org-tier-content">
+              <span class="org-tier-badge">Tier 1 &bull; Apex Policy</span>
+              <h4 class="org-tier-title">State Ministry Level</h4>
+              <p class="org-tier-desc">
+                Statutory oversight, legislative budget sanctions, and state digital policy formulation headed by the Cabinet Secretariat.
+              </p>
+              <div class="org-tier-key">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                <span>Key Entity: State Governance Council</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 2: Digital Core -->
+          <div class="org-tier-card org-tier-2" data-tier="2" tabindex="0">
+            <div class="org-tier-bg" style="background-image: url('Assets/hero-command.webp');"></div>
+            <div class="org-tier-bg-overlay"></div>
+            <div class="org-tier-content">
+              <span class="org-tier-badge">Tier 2 &bull; Digital Core</span>
+              <h4 class="org-tier-title">e-Governance Directorate</h4>
+              <p class="org-tier-desc">
+                Unified cloud core architecture, Digi-Locker APIs, cryptographic certificate issuance, and cybersecurity operations.
+              </p>
+              <div class="org-tier-key">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                <span>Key Entity: State Data Center (SDC)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 3: District Hub -->
+          <div class="org-tier-card org-tier-3" data-tier="3" tabindex="0">
+            <div class="org-tier-bg" style="background-image: url('Assets/about-building.webp');"></div>
+            <div class="org-tier-bg-overlay"></div>
+            <div class="org-tier-content">
+              <span class="org-tier-badge">Tier 3 &bull; District Hub</span>
+              <h4 class="org-tier-title">District Collectorates</h4>
+              <p class="org-tier-desc">
+                Headed by the District Collector (Salem & 37 other districts), managing grievance days, revenue appeals, and welfare audits.
+              </p>
+              <div class="org-tier-key">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                <span>Key Entity: Salem Collectorate HQ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tier 4: Citizen Touchpoint -->
+          <div class="org-tier-card org-tier-4" data-tier="4" tabindex="0">
+            <div class="org-tier-bg" style="background-image: url('Assets/citizen-service.webp');"></div>
+            <div class="org-tier-bg-overlay"></div>
+            <div class="org-tier-content">
+              <span class="org-tier-badge">Tier 4 &bull; Citizen Touchpoint</span>
+              <h4 class="org-tier-title">Taluk & e-Seva Centers</h4>
+              <p class="org-tier-desc">
+                Village Administrative Officers (VAO), Revenue Inspectors, and grassroots e-Seva kiosks serving citizens locally.
+              </p>
+              <div class="org-tier-key">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                <span>Key Entity: 12,500+ Active Kiosks</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEW SECTION 2: Citizen Charter & RTI Transparency Guarantee -->
+    <section class="section-padding" style="background: var(--bg-surface); overflow: hidden;" id="section-charter">
+      <div class="container">
+        <div style="max-width: 1000px; margin: 0 auto 48px;">
+          <span class="section-tag fade-in-up">Statutory Guarantee</span>
+          <h2 class="section-title" style="margin-bottom: 8px;">Citizen Charter & RTI Accountability</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">
+            Our services are governed by strict Right to Public Services legislation with legally enforceable timeframes.
+          </p>
+        </div>
+
+        <div class="charter-grid charter-shuffle-grid" id="charter-shuffle-grid" style="max-width: 1000px; margin: 0 auto;">
+          <!-- Card 1: Civil Registration (Shuffles from 3rd to 1st) -->
+          <div class="charter-sla-card charter-card-1" tabindex="0">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <span class="service-tag">Civil Registration</span>
+              <span class="charter-sla-highlight">3 - 7 Days SLA</span>
+            </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Certificate & License Delivery</h4>
+            <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.55; margin-bottom: 14px;">
+              Birth, Income, Community, and Driving License renewals are processed within predefined days. Automatic escalation occurs if unapproved.
+            </p>
+            <div style="font-size: 0.78rem; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 10px;">
+              Penalty Clause: Officer accountability for unexplained delays.
+            </div>
+          </div>
+
+          <!-- Card 2: Public Grievances (Presents in Center) -->
+          <div class="charter-sla-card charter-card-2" tabindex="0">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <span class="service-tag">Public Grievances</span>
+              <span class="charter-sla-highlight">48 Hours SLA</span>
+            </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Grievance Redressal Mechanism</h4>
+            <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.55; margin-bottom: 14px;">
+              Every lodged civic grievance receives an automated SMS token. Concerned executive engineers or Tehsildars must provide a formal resolution plan within 48 hours.
+            </p>
+            <div style="font-size: 0.78rem; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 10px;">
+              Direct Collector Review: Unresolved items highlighted on Monday.
+            </div>
+          </div>
+
+          <!-- Card 3: RTI Act 2005 (Shuffles from 1st to 3rd) -->
+          <div class="charter-sla-card charter-card-3" tabindex="0">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+              <span class="service-tag">RTI Act 2005</span>
+              <span class="charter-sla-highlight">15 Days SLA</span>
+            </div>
+            <h4 style="font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px;">Right to Information Electronic Filing</h4>
+            <p style="color: var(--text-soft); font-size: 0.88rem; line-height: 1.55; margin-bottom: 14px;">
+              Citizens can file digital RTI applications online for just ₹10. Public Information Officers (PIOs) furnish authenticated records digitally.
+            </p>
+            <div style="font-size: 0.78rem; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 10px;">
+              First Appellate Authority: One-click online appeal available.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="gov-footer">
+    <div class="container footer-top">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <a href="index.html" class="footer-logo-container" aria-label="Stackly Home">
+              <img src="Assets/stackly_logo_white.webp" alt="Stackly Logo" style="height: 44px; width: auto; max-width: 170px; object-fit: contain;">
+            </a>
+          </div>
+          <p class="footer-desc">
+            Committed to transparent governance, accessible services, and a better tomorrow for every citizen.
+          </p>
+          <div class="footer-social-links">
+            <a href="404.html" class="social-icon-btn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+            <a href="404.html" class="social-icon-btn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="404.html" class="social-icon-btn" aria-label="Instagram" title="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"></circle></svg></a>
+            <a href="404.html" class="social-icon-btn"><svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">&bull; Home</a></li>
+            <li><a href="about.html">&bull; About Portal</a></li>
+            <li><a href="services.html">&bull; Services Directory</a></li>
+            <li><a href="blog.html">&bull; News & Blog</a></li>
+            <li><a href="contact.html">&bull; Contact & Helpdesk</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Useful Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="404.html">&bull; Citizen Services</a></li>
+            <li><a href="404.html">&bull; Track Application</a></li>
+            <li><a href="404.html">&bull; Government Schemes</a></li>
+            <li><a href="404.html">&bull; Grievance Redressal</a></li>
+            <li><a href="404.html">&bull; Feedback & RTI</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Our Location</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Collectorate Office,<br>Salem - 636001,<br>Tamil Nadu, India.</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="404.html">+91 427 234 5678</a>
+            </div>
+            <div class="footer-contact-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="404.html">support@gov.in</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>&copy; 2026 Government Portal. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="404.html">Privacy Policy</a>
+          <a href="404.html">Terms of Use</a>
+          <a href="404.html">Accessibility</a>
+          <a href="404.html">Security Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,413 @@
+/* ==========================================================================
+   GOVERNMENT PORTAL - AUTHENTICATION STYLES (LOGIN & SIGN UP)
+   Full-screen edge-to-edge split layout (100% height & width)
+   ========================================================================== */
+
+.auth-page-body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #FFFFFF;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+/* Full Screen Edge-to-Edge Grid */
+.auth-split-screen {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  min-height: 100vh;
+  width: 100vw;
+  background: #FFFFFF;
+}
+
+/* --------------------------------------------------------------------------
+   LEFT SIDE - REAL IMAGE (FULL SCREEN COVER, NO GREEN COLOR OVERLAY)
+   -------------------------------------------------------------------------- */
+.auth-visual-side {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #F3F4F6;
+}
+
+.auth-visual-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   RIGHT SIDE - FORM DETAILS PANEL
+   -------------------------------------------------------------------------- */
+.auth-form-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 48px 60px;
+  background: #FFFFFF;
+  min-height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.auth-form-inner {
+  width: 100%;
+  max-width: 480px;
+  margin: auto 0;
+}
+
+/* Back to Home Button - Placed directly above Stackly Logo */
+.auth-back-nav {
+  margin-bottom: 24px;
+}
+
+.auth-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  background: #F3F4F6;
+  border: 1px solid var(--border-medium);
+  color: var(--text-soft);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.auth-back-btn:hover {
+  background: var(--primary-subtle);
+  color: var(--primary-dark);
+  border-color: var(--primary);
+  transform: translateX(-2px);
+}
+
+/* Logo & Header */
+.auth-brand-logo {
+  margin-bottom: 22px;
+}
+
+.auth-form-header {
+  margin-bottom: 24px;
+}
+
+.auth-form-header h1 {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.auth-form-header p {
+  font-size: 0.92rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Role Selector - 2 Roles relevant to Government Portal */
+.role-selector-wrap {
+  margin-bottom: 22px;
+}
+
+.role-selector-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-soft);
+  margin-bottom: 10px;
+}
+
+.role-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.role-card-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #F9FAFB;
+  border: 2px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+  user-select: none;
+}
+
+.role-card-btn:hover {
+  background: var(--primary-subtle);
+  border-color: rgba(22, 163, 74, 0.45);
+}
+
+.role-card-btn.active {
+  background: #F0FDF4;
+  border-color: var(--primary);
+  box-shadow: 0 4px 16px rgba(22, 163, 74, 0.12);
+}
+
+.role-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.role-card-btn.active .role-icon-box {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.role-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.role-card-name {
+  display: block;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.role-card-desc {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--text-light);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.role-check-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.role-card-btn.active .role-check-indicator {
+  border-color: var(--primary);
+  background: var(--primary);
+  color: #FFFFFF;
+}
+
+/* Form Groups & Inputs */
+.auth-form-group {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+.auth-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-input-icon {
+  position: absolute;
+  left: 14px;
+  color: var(--text-light);
+  pointer-events: none;
+  transition: color var(--transition-fast);
+}
+
+.auth-input {
+  width: 100%;
+  height: 48px;
+  padding: 0 42px 0 44px;
+  font-family: inherit;
+  font-size: 0.92rem;
+  color: var(--text-main);
+  background: #FFFFFF;
+  border: 1.5px solid var(--border-medium);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3.5px rgba(22, 163, 74, 0.14);
+}
+
+.auth-input:focus ~ .auth-input-icon {
+  color: var(--primary);
+}
+
+.auth-toggle-password {
+  position: absolute;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.auth-toggle-password:hover {
+  color: var(--text-main);
+}
+
+/* Inline Field Error Messages (Positioned directly below inputs) */
+.input-inline-error {
+  display: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #DC2626;
+  margin-top: 6px;
+  align-items: center;
+  gap: 5px;
+  line-height: 1.3;
+}
+
+.input-inline-error.show {
+  display: flex;
+}
+
+.auth-input.input-error {
+  border-color: #DC2626 !important;
+  background: #FFF5F5 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12) !important;
+}
+
+/* Feedback Alert */
+.auth-alert {
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  margin-bottom: 18px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+}
+
+.auth-alert-error {
+  background: #FEF2F2;
+  color: #DC2626;
+  border: 1px solid #FCA5A5;
+}
+
+.auth-alert-success {
+  background: #F0FDF4;
+  color: #16A34A;
+  border: 1px solid #86EFAC;
+}
+
+/* Bottom Navigation Link (Create Account / Sign In) */
+.auth-bottom-switch {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.auth-bottom-link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 5px;
+  transition: color var(--transition-fast);
+}
+
+.auth-bottom-link:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* Security footer notice */
+.auth-security-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 22px;
+  font-size: 0.76rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+/* Password Match Indicator */
+.password-match-hint {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  display: none;
+}
+
+.password-match-hint.valid {
+  color: #16A34A;
+  display: block;
+}
+
+.password-match-hint.invalid {
+  color: #DC2626;
+  display: block;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE DESIGN
+   -------------------------------------------------------------------------- */
+@media (max-width: 992px) {
+  .auth-split-screen {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-visual-side {
+    display: none;
+  }
+
+  .auth-form-side {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 520px) {
+  .role-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-form-row {
+    grid-template-columns: 1fr;
+  }
+}
